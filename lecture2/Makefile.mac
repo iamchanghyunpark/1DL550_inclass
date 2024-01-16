@@ -1,0 +1,28 @@
+CC = clang
+CFLAGS = -Wall -Wextra -std=c99 -g -L/opt/homebrew/opt/libomp/lib -I/opt/homebrew/opt/libomp/include
+
+TARGET = serial pthread openmp isPrime pi
+
+all: $(TARGET)
+
+serial: serial.c
+	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $< -Xpreprocessor -fopenmp -lomp
+
+pthread: pthread.c
+	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $< -pthread -Xpreprocessor -fopenmp -lomp
+
+openmp: openmp.c
+	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $< -Xpreprocessor -fopenmp -lomp
+
+
+isPrime: isPrime.c
+	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $<  -Xpreprocessor -fopenmp -lomp
+
+pi: pi.c
+	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $<  -Xpreprocessor -fopenmp -lomp
+
+
+clean:
+	rm -f $(TARGET)
+
+.PHONY: all clean
