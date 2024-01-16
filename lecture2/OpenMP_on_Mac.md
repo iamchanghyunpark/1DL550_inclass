@@ -9,3 +9,5 @@ brew install libomp
 3. In the Makefile change the -fopenmp to `-Xpreprocessor -fopenmp -lomp`
 Also add `-L/opt/homebrew/opt/libomp/lib -I/opt/homebrew/opt/libomp/include`
 to the LDFLAGS or CFLAGS.
+
+https://gist.github.com/ijleesw/4f863543a50294e3ba54acf588a4a421
