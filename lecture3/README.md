@@ -1,5 +1,9 @@
 # Lecture 3 Data-level-parallelism (SIMD) In-class codes
 
+## References to intrinsics
+* [Arm intrinsics](https://developer.arm.com/architectures/instruction-sets/intrinsics/) - filter for NEON instructions
+* [Intel intrinsics](https://www.intel.com/content/www/us/en/docs/intrinsics-guide/index.html) - filter for all of the `SSE family` and just the `AVX` within the `AVX family`.
+
 In this module we will look at two tasks.
 
 ## 1. Converting a color image into a grayscale image.
