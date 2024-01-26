@@ -51,6 +51,12 @@ I have uploaded into our project shared directory.
 ./setup_img_links.sh
 ```
 
+If you are working on your own computers, you can transfer template images
+from Rackham:
+```
+rsync -az --progress [your_rackham_username]@rackham.uppmax.uu.se:/proj/uppmax2024-2-5/shared/lecture3-inclass/*.ppm .
+```
+
 Now, you are ready to start coding.
 There are three parts of this program:
 
